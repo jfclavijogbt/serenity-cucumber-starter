@@ -32,9 +32,11 @@ public class GenericRestClient {
     }
 
     private static RequestSpecification defaultRequestSpecification() {
+        //java 17
+        return SerenityRest.given().baseUri("https://api-automation.soymach.com").log().all();
+        //java 1.8
+        //return SerenityRest.setDefaultRequestSpecification(RestAssured.given()).given().baseUri("https://api-automation.soymach.com").log().all();
        //return SerenityRest.given(RestAssured.given().baseUri("https://api-automation.soymach.com")).log().all();
-        //return SerenityRest.given().baseUri("https://api-automation.soymach.com").log().all();
-        return SerenityRest.setDefaultRequestSpecification(RestAssured.given()).given().baseUri("https://api-automation.soymach.com").log().all();
     }
 
     public ValidatableResponse runWebServiceWithBody(Method httpMethod, String resource, Object requestBody) {
