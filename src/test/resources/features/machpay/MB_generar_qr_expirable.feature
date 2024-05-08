@@ -13,7 +13,7 @@ Característica: Generar QRs de cobro en Mach Business
     Y ha ingresado credenciales de acceso válidas
 
   @ImmediateChargeQRGeneration @issue:MACHEX-182
-  Esquema del escenario: Escenario: Generar QR de cobro inmediato
+  Esquema del escenario: Generar QR de cobro inmediato
     Cuando ingresa a la opción de Cobro inmediato
     Y genera un QR con los datos de cobro:
       | Monto   | Propina   | Descripción   | Nombre   | Sucursal   | Caja   |
